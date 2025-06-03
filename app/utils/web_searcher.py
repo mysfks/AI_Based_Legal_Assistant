@@ -1,5 +1,5 @@
 """
-    Operations for retrieving requested information from "karararama.yargitay.gov.tr" website.
+    Operations for retrieving requested information from "..." website.
 """
 import requests
 from bs4 import BeautifulSoup
@@ -8,10 +8,10 @@ session = requests.Session()
 
 # Custom HTTP headers for the Supreme Court decision search website
 headers = {
-    "Host": "karararama.yargitay.gov.tr",
-    "Content-Type": "application/json; charset=UTF-8",
-    "Origin": "https://karararama.yargitay.gov.tr",
-    "Referer": "https://karararama.yargitay.gov.tr/",
+    "Host": "",
+    "Content-Type": "",
+    "Origin": "",
+    "Referer": "",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
     "X-Requested-With": "XMLHttpRequest",
 }
@@ -20,7 +20,7 @@ def perform_search(query, page=1, page_size=10):
     """
         Sends a query to the Supreme Court decision search API and returns results as JSON.
     """
-    url = "https://karararama.yargitay.gov.tr/aramalist"
+    url = ""
     payload = {
         "data": {
             "aranan": query,
@@ -37,7 +37,7 @@ def fetch_decision_by_id(doc_id):
     """
         Retrieves decision details for the specified decision ID as JSON.
     """
-    url = f"https://karararama.yargitay.gov.tr/getDokuman?id={doc_id}"
+    url = f"https://..../getDokuman?id={doc_id}"
     response = session.get(url, headers=headers)
     response.raise_for_status()
     return response.json()
