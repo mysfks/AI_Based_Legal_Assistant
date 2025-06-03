@@ -6,7 +6,6 @@
 
 ## 🌍 Languages
 - **English** (below)
-- **[Türkçe](#türkçe)**
 
 ---
 
